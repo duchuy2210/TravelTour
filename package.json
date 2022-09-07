@@ -1,0 +1,23 @@
+{
+  "name": "traveltour",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duchuy2210/TravelTour.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duchuy2210/TravelTour/issues"
+  },
+  "homepage": "https://github.com/duchuy2210/TravelTour#readme",
+  "devDependencies": {
+    "express": "^4.18.1"
+  }
+}
