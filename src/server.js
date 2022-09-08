@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000 //lấy port ở biến môi trường ,||
 
 //function config view engine
 viewEngine(app)
-
+/* app.use(express.static(path.join(__dirname, 'public'))); *///cho phép các file được lưu trữ trong file public sẽ ở chế độ public và có thể xem được ở phía client
 app.get('/', (req, res) => {
   res.render('index.ejs')
 })
