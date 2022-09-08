@@ -1,0 +1,6 @@
+//file config cho babel
+{
+    "presets": [
+      "@babel/preset-env"
+    ]
+ }
