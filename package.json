@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 { 
+=======
+{
+  "type" :"module",
+>>>>>>> dev
   "name": "traveltour",
   "version": "1.0.0",
   "description": "",
