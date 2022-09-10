@@ -3,7 +3,6 @@ const path = require('path');
 import express from 'express';
 import viewEngine from './configs/viewEngine.js';
 import Routes from './routes/web.js'
-/* import connection from './configs/connectDB' */
 
 require('dotenv').config()//use dotenv 
 
