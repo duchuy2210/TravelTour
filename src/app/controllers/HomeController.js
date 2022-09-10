@@ -1,7 +1,7 @@
 import connection from "../../configs/connectDB.js";
 class homeConttroller {
     getHomePage(req, res, next) { 
-        let data = [];
+        /* let data = [];
         connection.query(
             'SELECT * FROM `users`',
             function(err, results, fields) {
@@ -16,10 +16,10 @@ class homeConttroller {
                 })
                 console.log(data);
                 return res.render('index.ejs',{dataUser: JSON.stringify(data)})
-            });
+            }); */
     }
     duchuy(req, res, next) {
-        res.render('duchuy')
+        res.render('homePage.ejs')
     }
 }
 
