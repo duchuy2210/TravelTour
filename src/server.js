@@ -1,10 +1,12 @@
-const path = require('path');
+import path from 'path';
 /* const express = require('express') */
 import express from 'express';
+import { url } from 'inspector';
 import viewEngine from './configs/viewEngine.js';
 import Routes from './routes/web.js'
+import dotenv from 'dotenv';
 
-require('dotenv').config()//use dotenv 
+dotenv.config()//use dotenv 
 
 const app = express()
 const port = process.env.PORT || 3000 //lấy port ở biến môi trường ,||3000 là backup cho lỗi khi kh lấy được port ở env
