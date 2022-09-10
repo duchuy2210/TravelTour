@@ -1,1 +1,27 @@
-<h1>Địt cụ</h1>
+
+<table class="table table-striped table-info table-hover">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Tour Name</th>
+            <th scope="col">Time</th>
+            <th scope="col">Cost</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <% for(var i=0; i < dataUser.length; i++) { %>
+    <tbody>
+        <tr>
+            <th scope="row"><%= dataUser[i].id %></th>
+            <td><%= dataUser[i].tourName %></td>
+            <td><%= dataUser[i].time %></td>
+            <td><%= dataUser[i].cost %></td>
+            <td>
+                <a href="/detail_tour/<%= dataUser[i].id %>" class="btn btn-primary" type="button">More Details</a> 
+                <button class="btn btn-warning" type="button">Edit</button> 
+                <button class="btn btn-danger" type="button">Delete</button> 
+            </td>
+        </tr>
+    </tbody>
+    <% } %>
+</table>
