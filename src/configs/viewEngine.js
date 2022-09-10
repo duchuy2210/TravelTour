@@ -8,4 +8,4 @@ const configViewEngine = (app)=>{
     app.set('views','./src/resources/views');//tìm file ejs ở file nào
     console.log(__dirname);//
 }
-module.exports = configViewEngine;
+export default configViewEngine;
