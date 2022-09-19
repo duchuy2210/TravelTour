@@ -1,0 +1,22 @@
+<h1 class="text-center">Cập nhật lại tour</h1>
+<a href="/" style="margin-left:250px" class="btn btn-secondary mb-3">Trở về</a>
+<form method="POST" action="/tours/edit_tour_complete" style="width:70%; margin: 0 auto">
+    <div class="mb-3">
+      <label class="form-label">Tour Name:</label>
+      <input type="text" class="form-control" name="tourname" value="<%= tour.tourName%>">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Time:</label>
+      <input type="text" class="form-control" name="time" value="<%= tour.time%>">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Cost:</label>
+      <input type="number" class="form-control" name="cost" value="<%= tour.cost%>">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Route:</label>
+      <input type="text" class="form-control" name="route" value="<%= tour.route%>">
+    </div>
+    <input type="text" hidden value="<%= tour.id %>" name="id">
+    <button style="margin-left:900px" type="submit" class="btn btn-primary">Update</button>
+</form>
