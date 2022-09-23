@@ -44,5 +44,26 @@ class homeConttroller {
             // Display uploaded image for user validation
             res.send(`You have uploaded this image: <hr/><img src="/image/${req.file.filename}" width="500"><hr /><a href="/uploadFile">Upload another image</a>`);
     }
+
+    handleUploadMultipleFiles(req, res, next){
+        const files = req.files;
+        console.log(files);
+        if (req.fileValidationError) {
+            return res.send(req.fileValidationError);
+        }
+        else if (!req.files) {
+            return res.send('Please select an image to upload');
+        }
+
+        let result = "You have uploaded these images: <hr />";
+        let index, len;
+
+        // Loop through all the uploaded images and display them on frontend
+        for (index = 0, len = files.length; index < len; ++index) {
+            result += `<img src="/image/${req.files[index].filename}" width="300" style="margin-right: 20px;">`;
+        }
+        result += `<hr/><a href="/uploadFile">Upload more images</a>`;
+        res.send(result);
+    }
 }   
 export default new homeConttroller ;

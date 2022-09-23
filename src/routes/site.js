@@ -26,9 +26,26 @@ const imageFilter = function(req, file, cb) {
 };
 
 let upload = multer({ storage: storage, fileFilter: imageFilter });
+let upload1 = multer({ storage: storage, fileFilter: imageFilter }).array('multiple-files', 3);
 
 Router.get('/',homeConttroller.getHomePage);
 Router.get('/uploadFile',homeConttroller.getUploadFilePage)
 Router.post('/upload-single-file',upload.single('single-file'),homeConttroller.handleUploadSingleFile);//middleware
+
+Router.post('/upload-multiple-file',(req, res, next) => {
+    upload1(req, res, err => {
+        if (err instanceof multer.MulterError && err.code === "LIMIT_UNEXPECTED_FILE") {
+            // handle multer file limit error here
+            res.send(`Quá giới hạn file ảnh<hr/><a href="/uploadFile">Tải ảnh lại</a>`)
+        } else if (err) {
+            res.send(err)
+        }
+        else {
+            // make sure to call next() if all was well
+            next();
+        }
+    });
+},homeConttroller.handleUploadMultipleFiles);//middleware
+
 
 export default Router;
