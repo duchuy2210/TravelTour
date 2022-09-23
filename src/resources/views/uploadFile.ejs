@@ -1,0 +1,21 @@
+<div class="upLoadFile-Container">
+    <form style="width:50%;margin:0 auto" method="POST" action="/upload-single-file" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Single File</label>
+            <input class="form-control" type="file" id="formFile" name="single-file">
+        </div>
+        <div>
+            <button class="btn btn-primary" type="submit" >Save file</button>
+        </div>
+    </form>
+
+    <form style="width:50%;margin:0 auto" method="POST" class="mt-5" action="/upload-multiple-file" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="formFileMultiple" class="form-label">Multiple File </label>
+            <input class="form-control" type="file" id="formFileMultiple" multiple name="multiple-file">
+        </div>
+        <div>
+            <button class="btn btn-primary" type="submit">Save file</button>
+        </div>
+    </form>
+</div>

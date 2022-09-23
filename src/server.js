@@ -1,10 +1,10 @@
 import path from 'path';
 /* const express = require('express') */
 import express from 'express';
-import { url } from 'inspector';
 import viewEngine from './configs/viewEngine.js';
 import Routes from './routes/web.js'
 import dotenv from 'dotenv';
+import multer from 'multer';
 
 dotenv.config()//use dotenv 
 
